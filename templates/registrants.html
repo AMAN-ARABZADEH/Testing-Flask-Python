@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block body  %}
+
+    <h1>Registered successfully!</h1>
+    <ul>
+        {% for name, sport in REGISTRANTS.items() %}
+              <li>{{ name }} - {{ sport }}</li>
+        {% endfor %}
+
+    </ul>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<form action="/register" method="post">
+
+    <fieldset>
+        <legend>Registration Form</legend>
+
+        <div>
+            <label for="name">Name:</label>
+            <input id="name" autofocus autocomplete="off" name="name" placeholder="Enter your name..." type="text" required>
+        </div>
+
+        <div>
+            <label for="sport">Favorite Sport:</label>
+            <select id="sport" name="sport" required>
+                <option value="">Select a sport...</option>
+                    {% for sport in sports %}
+                    <option value="{{ sport }}">{{ sport }}</option>
+                    {% endfor %}
+            </select>
+
+        </div>
+
+        <div>
+            <button type="submit" class="btn">Register</button>
+        </div>
+
+    </fieldset>
+</form>
+
+{% endblock %}
