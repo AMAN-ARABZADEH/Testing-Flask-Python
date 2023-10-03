@@ -1,12 +1,17 @@
 {% extends "base.html" %}
-{% block body  %}
 
-    <h1>Registered successfully!</h1>
-    <ul>
-        {% for name, sport in REGISTRANTS.items() %}
-              <li>{{ name }} - {{ sport }}</li>
-        {% endfor %}
+{% block body %}
+    <div class="registrants-container">
+        <h2>List of Registrants</h2>
 
-    </ul>
-
+        {% if registrants %}
+        <ul class="registrants-list">
+            {% for registrant in registrants %}
+                <li>{{ registrant.name }} - {{ registrant.sport }}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No one has registered yet.</p>
+        {% endif %}
+    </div>
 {% endblock %}

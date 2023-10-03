@@ -1,5 +1,12 @@
-
+{% extends "base.html" %}
 
 {% block body %}
-
+    <div class="registration-success">
+        <h2>Registration Successful!</h2>
+        <p>Thank you, <strong>{{ name }}</strong>. You've successfully registered for <strong>{{ sport }}</strong>.</p>
+        <div class="navigation-options">
+            <a href="/">Return to Home</a> |
+            <a href="/registrants">View All Registrants</a>
+        </div>
+    </div>
 {% endblock %}

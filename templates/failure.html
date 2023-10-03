@@ -1,6 +1,11 @@
 {% extends "base.html" %}
-{% block body  %}
 
-You are not registered.
+{% block body %}
+
+<div class="failure">
+    <h2>Registration Failed</h2>
+    <p>Oops! It seems there was an issue with your registration. Please ensure you provide a valid name and select a sport from the list.</p>
+    <a href="{{ url_for('index') }}" class="button">Return to Registration</a>
+</div>
 
 {% endblock %}
